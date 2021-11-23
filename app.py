@@ -5,7 +5,7 @@ from PIL import Image
 from io import BytesIO
 
 # Use HTTP requests to obtain PNG image (Change this line to other images)
-x = requests.get('https://raw.githubusercontent.com/Justinkhor/dash/main//images/fire.png')
+x = requests.get('https://raw.githubusercontent.com/Justinkhor/dash/main/images/fire.png')
 
 # Retrieve image file
 img = Image.open(BytesIO(x.content))
