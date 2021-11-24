@@ -35,7 +35,7 @@ app.layout = html.Div([
     Input('generate', 'n_clicks')
 )
 
-def update_output(n_clicks):
+def update_output():
 
     # Randomly choose one image
     img = random.choice(images)
@@ -46,7 +46,8 @@ def update_output(n_clicks):
 
     # Retrieve image file
     img = Image.open(BytesIO(req.content))
-
+    
+    # Update figure to show image
     fig = px.imshow(img)
     fig.update_layout(dragmode="drawrect")
 
